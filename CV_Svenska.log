@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.2.13)  1 SEP 2014 12:06
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.2.13)  2 SEP 2014 12:09
 entering extended mode
 **CV_Svenska.tex
 (C:\Users\Easysimulation\Desktop\T00ls\ltx\CV\CV_Svenska.tex
@@ -795,11 +795,11 @@ Package rerunfilecheck Info: File `CV_Svenska.out' has not changed.
 (rerunfilecheck)             Checksum: BBA97D45C828928A60FEB2C6F493B111;713.
  ) 
 Here is how much of TeX's memory you used:
- 12288 strings out of 493921
- 178960 string characters out of 3144849
+ 12290 strings out of 493921
+ 178986 string characters out of 3144849
  387598 words of memory out of 3000000
  15351 multiletter control sequences out of 15000+200000
- 68282 words of font info for 74 fonts, out of 3000000 for 9000
+ 68383 words of font info for 75 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  42i,13n,67p,776b,467s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}{C:/Program F
@@ -814,7 +814,7 @@ x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsso12.pfb><C:/Program Files (x86)/MiKTe
 X 2.9/fonts/type1/public/lm/lmsso17.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
 s/type1/public/lm/lmsy10.pfb><C:/Users/Easysimulation/AppData/Roaming/MiKTeX/2.
 9/fonts/type1/public/marvosym/marvosym.pfb>
-Output written on CV_Svenska.pdf (2 pages, 261823 bytes).
+Output written on CV_Svenska.pdf (2 pages, 261789 bytes).
 PDF statistics:
  97 PDF objects out of 1000 (max. 8388607)
  9 named destinations out of 1000 (max. 500000)
