@@ -279,6 +279,7 @@
 \newcommand*{\extrainfo}[1]{\def\@extrainfo{#1}}
 \newcommandx*{\photo}[3][1=64pt,2=0.4pt,usedefault]{\def\@photowidth{#1}\def\@photoframewidth{#2}\def\@photo{#3}}% the 1st (optional) argument is the width of the photo, the 2nd (optional) argument is the thickness of the frame around it.
 \newcommand*{\quote}[1]{\def\@quote{#1}}
+\newcommand*{\personalinfo}[1]{\def\@personalinfo{#1}}
 
 % fonts
 \newcommand*{\namefont}{}
@@ -288,6 +289,7 @@
 \newcommand*{\sectionfont}{}
 \newcommand*{\subsectionfont}{}
 \newcommand*{\hintfont}{}
+\newcommand*{\pinfofont}{}
 
 % styles
 \newcommand*{\namestyle}[1]{{\namefont#1}}
@@ -297,6 +299,7 @@
 \newcommand*{\sectionstyle}[1]{{\sectionfont#1}}
 \newcommand*{\subsectionstyle}[1]{{\subsectionfont#1}}
 \newcommand*{\hintstyle}[1]{{\hintfont#1}}
+\newcommand{\pinfostyle}[1]{\pinfofont#1}
 
 % recompute all resume lengths
 \newcommand*{\recomputecvlengths}{}
