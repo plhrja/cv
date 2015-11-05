@@ -1,0 +1,372 @@
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+% Style package that contains all localized content of the CV.
+% Note, however, that it is not possible to localize the sections at the moment, as it result in compile-time errors.
+%
+% Author: RS
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % 
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{CV_localization}[2015/11/05 Package that provides the localization for the CV.]
+
+% ---------------------------------------------------------------------------------------------------------
+%													Macros
+% ---------------------------------------------------------------------------------------------------------
+
+\RequirePackage[utf8]{inputenc}
+
+\newcommand*{\lentry}[3]{%
+	\ifthenelse{\equal{\langname}{english}}{#1}{%
+		\ifthenelse{\equal{\langname}{finnish}}{#2}{%
+			\ifthenelse{\equal{\langname}{swedish}}{#3}{%
+			}%
+		}%
+	}%
+}
+
+
+% ---------------------------------------------------------------------------------------------------------
+%											  Localized content
+% ---------------------------------------------------------------------------------------------------------
+
+\newcommand*{\army}{\lentry{%
+Military service%
+}{%
+Asepalvelus%
+}{%
+Militärtjänst%
+}%
+}
+
+\newcommand*{\armybase}{\lentry{%
+Navy orchestra, Turku%
+}{%
+Laivaston soittokunta, Turku%
+}{%
+Flottans musikkår, Åbo%
+}%
+}
+
+\newcommand*{\assari}{\lentry{%
+Course assistant%
+}{%
+Kurssiassistentti%
+}{%
+Kursassistent%
+}%
+}
+
+\newcommand*{\assaricontent}{\lentry{%
+As an course assistant I was responsible of conducting weekly exercise sessions for undergraduate students in different courses. I was also expected to develop model solutions to the exercise handouts and document the amount of exercises solved by the participants of the course.%
+}{%
+Kurssiassistenttina vastuunani oli pitää viikottaisia laskuharjoitustilaisuuksia, joissa käytiin läpi kurssiin liittyviä laskuharjoitustehtäviä. Lisäksi vastuualeeseeni kuului myös mallivastauksien laatiminen, sekä kurssin osallistujien ratkaisemien laskuharjoitustehtävien lukumäärän dokumentointi.%
+}{%
+Kursassistent%
+}%
+}
+
+\newcommand*{\basics}{\lentry{%
+Basics%
+}{%
+Perusteet%
+}{%
+Grunder%
+}%
+}%
+
+\newcommand*{\bdeg}{\lentry{%
+Bachelor of Science%
+}{%
+Luonnontieteiden Kandidaatti%
+}{%
+Kandidat i Naturvetenskaper%
+}%
+}
+
+\newcommand*{\bthesis}{\lentry{%
+Bachelor thesis (in Swedish)%
+}{%
+Kandidaatintutkielma (ruotsiksi)%
+}{%
+Kandidatarbete%
+}%
+}
+
+\newcommand*{\db}{\lentry{%
+Database%
+}{%
+Tietokannat%
+}{%
+Databas%
+}%
+}%
+
+\newcommand*{\descr}{\lentry{%
+Description%
+}{%
+Kuvaus%
+}{%
+Beskrivning%
+}%
+}%
+
+\newcommand*{\descrcontent}{\lentry{%
+The thesis is a study on option pricing in the discrete Black-Scholes model (also known as the Cox-Ross-Rubenstein model).%
+}{%
+Tutkintotyö käsittelee optioiden hinnoittelua diskreetin Black-Scholes mallin avulla (tunnetaan myös yleisesti Cox-Ross-Rubenstein mallina).%
+}{%
+Examensarbetet behandlar prissättning av optioner i diskret tid med hjälp av den diskreta Black-Scholes modellen (även allmänt känd som Cox-Ross-Rubinstein modellen).%
+}%
+}%
+
+\newcommand*{\education}{\lentry{%
+Education%
+}{%
+Koulutus%
+}{%
+Utbildning%
+}%
+}
+
+\newcommand*{\english}{\lentry{%
+English%
+}{%
+Englanti%
+}{%
+Engelska%
+}%
+}%
+
+\newcommand*{\epcontent}{\lentry{%
+The research for my master thesis was done for Estlander \& Partners. The main topic in my research was time series modelling of commodity futures utilizing Bayesian filtering algorithms.%
+}{%
+Tutkimustyön maisterin tutkintoani varten tein Estlander \& Partners:lle. Tutkimustyöni keskittyi hyödyke-, ja raaka-aine futuurien aikasarjamallinnukseen bayesilaisen filtteröintialgoritmin avulla.%
+}{%
+Jag gjorde mitt forskningsarbete inför min magisterutbildning för Estlander \& Partners. I mitt forskningsarbete fokuserade jag mig i tidsseriemodellering av råvaro-futurer med hjälpa Bayesiska filteralgoritmer.%
+}%
+}
+
+\newcommand*{\excellent}{\lentry{%
+Excellent%
+}{%
+Erinomainen%
+}{%
+Utmärkt%
+}%
+}%
+
+\newcommand*{\finnish}{\lentry{%
+Finnish%
+}{%
+Suomi%
+}{%
+Finska%
+}%
+}%
+
+\newcommand*{\freetrial}{\lentry{%
+Free trial offered by Valuatum (requires registration)%
+}{%
+Free trial Valuatumin ohjelmistolle (vaatii rekisteröitymisen)%
+}{%
+Finska%
+}%
+}%
+
+\newcommand*{\german}{\lentry{%
+German%
+}{%
+Saksa%
+}{%
+Tyska%
+}%
+}%
+
+\newcommand*{\gradestim}{\lentry{%
+Estimated graduation: 02/2016%
+}{%
+Arvioitu valmistuminen: 02/2016%
+}{%
+Förväntad utexamineringstidpunkt: 02/2016%
+}%
+}
+
+\newcommand*{\haddress}{\lentry{%
+Amiraalin Puistotie 6 B 15	%
+}{%
+Amiraalin Puistotie 6 B 15	%
+}{%
+Amiralsallen 6 B 15%
+}%
+}
+
+\newcommand*{\hpinfo}{\lentry{%
+Date of birth 10.6.1989%
+}{%
+Syntynyt 10.6.1989%
+}{%
+Född 10.6.1989%
+}%
+}
+
+\newcommand*{\hquote}{\lentry{%
+I am a graduate student at Helsinki university majoring in numerical mathematics. My fields of interest also include financial mathematics and computer science. I have been very successful in my studies, which in turn has had an influence in my versatile employment history.%
+}{%
+Olen matematiikasta, ohjelmoinnista ja haasteista pitävä  monipuolisen työkokemuksen omaava luonnontieteiden kandidaatti Helsingin yliopiston tietokoneavusteisen matematiikan linjalta. Olen myös opiskellut paljon tietojenkäsittelyä sekä finanssi- ja vakuutusmatematiikkaa.%
+}{%
+Jag är kandidat i naturvetenskaper och studerar matematik inom linjen finans- och försäkringsmatematik vid Helsingfors universitet. Jag har även betonat starkt numerisk matematik och informationsbehandling i mina studier. Detta kombinerat med de senaste arbetserfarenheterna som software consultant har gett mig färdigheter till många olika roller inom arbetslivet.%
+}%
+}
+
+\newcommand*{\japanese}{\lentry{%
+Japanese%
+}{%
+Japani%
+}{%
+Japanska%
+}%
+}%
+
+\newcommand*{\langscript}{\lentry{%
+Languages \\\& \\Scripting%
+}{%
+Kielet \\\& \\Skriptaus%
+}{%
+Språk \\\& \\Scripting%
+}%
+}
+
+\newcommand*{\mdeg}{\lentry{%
+Master of Science%
+}{%
+Filosofian Maisteri%
+}{%
+Filosofie Magister%
+}%
+}
+
+\newcommand*{\methods}{\lentry{%
+Methods%
+}{%
+Menetelmät%
+}{%
+Metoder%
+}%
+}
+
+\newcommand*{\methodscontent}{\lentry{%
+Object-oriented programming, Test-driven development, UML, Agile methods, Scrum, Kanban, Scrumban, AceProject%
+}{%
+Olio-ohjelmointi, Test-driven development, UML, Ketterät menetelmät, Scrum, Kanban, Scrumban, AceProject%
+}{%
+Object-oriented programming, Test-driven development, UML, Agile methods, Scrum, Kanban, Scrumban, AceProject%
+}%
+}
+
+\newcommand*{\native}{\lentry{%
+Native%
+}{%
+Äidinkieli%
+}{%
+Modersmål%
+}%
+}
+
+\newcommand*{\pobox}{\lentry{%
+02320, Espoo%
+}{%
+02320, Espoo%
+}{%
+02320, Esbo%
+}%
+}%
+
+\newcommand*{\simtech}{\lentry{%
+Software expert%
+}{%
+Ohjelmistoasiantuntija%
+}{%
+Software expert%
+}%
+}%
+
+\newcommand*{\simtechcontent}{\lentry{%
+My responsibility was running fluid interaction and heat transfer simulations, analysing the results and finally giving reports on the simulations to different customers (mostly foundries). The main tools I used was Flow3D (CFD software) and Solidworks (CAD modelling software). I have also held training sessions for numerous Finnish and international customers. My expertise in programming and customer relations were highly appreciated by my employer.%
+}{%
+Vastuualueeni on virtaus- ja lämmönsiirtosimulointien ajaminen, tulosten analysointi sekä raportointi asiakkaille (pääosin eri valimoille). Keskeisimmät työkalut työssäni olivat Flow3D (virtausten ja lämmönsiirrön mallinusohjelmisto) sekä Solidworks (CAD ohjelmisto). Olen myös toiminut koulutustehtävissä sekä kansainvälisten että suomailaisten asiakkaiden kanssa. Työssa käytän suomen lisäksi englantia päivittäin. Työssäni kiitosta olen saanut erityisesti monipuolisesta osaamisestani ohjelmoinnissa ja tietokoneohjelmien käytössä, sekä kielitaidosta.%
+}{%
+Till mitt ansvarsområde hörde simuleringar av ström- och värmeöverföring, analys av resultaten och framställning av denna analys till kunder (huvudsakligen till olika gjuterier). Simuleringarna kräver, förutom behärskandet av CFD programmet, förmågan att bearbeta CAD-modeller och även skapa nya modeller. Jag har även genomfört olika utbildningsuppdrag för finska och internationella kunder. Förutom finska använde jag engelska dagligen i mina arbetsuppdrag. Beröm har jag fått speciellt för mina mångsidiga kunskaper inom programmering och för mina språkkunskaper.%
+}%
+}%
+
+
+\newcommand*{\supervisor}{\lentry{%
+Supervisor%
+}{%
+Ohjaaja%
+}{%
+Handledare%
+}%
+}%
+
+\newcommand*{\swedish}{\lentry{%
+Swedish%
+}{%
+Ruotsi%
+}{%
+Svenska%
+}%
+}%
+
+\newcommand*{\topic}{\lentry{%
+Topic%
+}{%
+Otsikko%
+}{%
+Examensarbete%
+}%
+}%
+
+\newcommand*{\tutor}{\lentry{%
+Tutor%
+}{%
+Tukiopettaja%
+}{%
+Tutor%
+}%
+}%
+
+\newcommand*{\techframe}{\lentry{%
+Technologies \\\& \\ Frameworks%
+}{%
+Teknologioita \\\& \\ Kehyksiä%
+}{%
+Teknologier \\\& \\ Frameworks%
+}%
+}%
+
+\newcommand*{\tutorcontent}{\lentry{%
+I have been tutoring several high school students in their math courses (both in the long and short curriculum). The tutoring usually consisted of weekly sessions where I would assist a student according to his/her wishes and needs. I have received a lot of great feedback from my tutoring.%
+}{%
+Olen antanut tuki-, sekä kertausopetusta matematiikassa (sekä lyhyen että pitkän oppimäärän kursseissa) usealle eri lukiolaiselle lähes koko yliopisto-opintojeni ajan. Opetus on yleensä koostunut viikottaisista tapaamisista, joissa olen ohjannut opiskelijaa hänen tarpeidensa mukaan. Sain opetuksestani paljon hyvää palautetta.%
+}{%
+Tutor%
+}%
+}%
+
+\newcommand*{\uni}{\lentry{%
+Helsinki University%
+}{%
+Helsingin Yliopisto%
+}{%
+Helsingfors Universitet%
+}%
+}%
+
+\newcommand*{\valuatumcontent}{\lentry{%
+I am working as a part of a developer team developing a credit risk and equity research web application (provided as SaaS). Both the backend (Java and MySQL) and frontend (JSP and JavaScript) rely heavily on different frameworks. I have also familiarized myself with different automated unit-, and integration testing techniques and technologies in my work at Valuatum.%
+}{%
+Työskentelen osana osaketutkimuks-, ja luottoriskianalyysi-(web)työkalun kehitystiimiä. Sekä sovelluksen backend (Java ja MySQL), että frontend (JSP ja JavaScript) rakentuvat vahvasti eri solluskehysten päälle. Työssäni olen myös tutustunt ja oppinut soveltamaan eri yksikkö-, ja integraatiotestausmentelmiä ja teknologioita.%
+}{%
+Helsingfors Universitet%
+}%
+}%

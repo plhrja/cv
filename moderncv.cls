@@ -178,7 +178,9 @@
 % compatibility package with older versions of moderncv
 \RequirePackageWithOptions{moderncvcompatibility}
 
-
+%~~~~~~~~~~~~ Roope-edit ~~~~~~~~~~~~
+\RequirePackage{CV_localization}
+%~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 %-------------------------------------------------------------------------------
 %                class definition
 %-------------------------------------------------------------------------------

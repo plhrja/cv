@@ -55,7 +55,7 @@
 \renewcommand*{\quotefont}{\large\slshape}
 \renewcommand*{\sectionfont}{\Large\mdseries\upshape}
 \renewcommand*{\subsectionfont}{\large\mdseries\upshape}
-\renewcommand*{\hintfont}{}
+\renewcommand*{\hintfont}{\small}
 \renewcommand*{\pinfofont}{\Large\mdseries\upshape}
 
 % styles
@@ -179,7 +179,7 @@
 
 \renewcommand*{\cvitem}[3][.25em]{%
   \begin{tabular}{@{}p{\hintscolumnwidth}@{\hspace{\separatorcolumnwidth}}p{\maincolumnwidth}@{}}%
- 	  \raggedleft\hintstyle{\bfseries #2} &{#3}%
+ 	  \raggedleft\hintstyle{#2} &{#3}%
   \end{tabular}%
   \par\addvspace{#1}}
 

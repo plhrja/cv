@@ -1,39 +1,16 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% "ModernCV" CV and Cover Letter
-% LaTeX Template
-% Version 1.1 (9/12/12)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Xavier Danaux (xdanaux@gmail.com)
-%
-% License:
-% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%
-% Important note:
-% This template requires the moderncv.cls and .sty files to be in the same 
-% directory as this .tex file. These files provide the resume style and themes 
-% used for structuring the document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
-
 \documentclass[11pt,a4paper,sans]{moderncv} % Font sizes: 10, 11, or 12; paper sizes: a4paper, letterpaper, a5paper, legalpaper, executivepaper or landscape; font families: sans or roman
 
 \moderncvstyle{casual} % CV theme - options include: 'casual' (default), 'classic', 'oldstyle' and 'banking'
-\moderncvcolor{black} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+\moderncvcolor{Roope} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
+
+\def \langname {finnish}
 
 \renewcommand*{\cventry}[7][.25em]{%
   \cvitem[#1]{#2}{%
     {\bfseries#3}%
-   \ifthenelse{\equal{#4}{}}{}{, {\slshape#4}}
-    \ifthenelse{\equal{#5}{}}{}{ #5}%
-    \ifthenelse{\equal{#6}{}}{}{ #6}%
+   	\if\relax\detokenize{#4}\relax{}\else{, {\slshape#4}}\fi%
+    \if\relax\detokenize{#5}\relax{}\else{ #5}\fi%
+    \if\relax\detokenize{#6}\relax{}\else{ #6}\fi%
     \strut%
     \ifx&#7&%
       \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
@@ -41,7 +18,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 \usepackage[scale=0.75]{geometry} % Reduce document margins
-%\setlength{\hintscolumnwidth}{3cm} % Uncomment to change the width of the dates column
+\setlength{\hintscolumnwidth}{2.5cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
 %----------------------------------------------------------------------------------------
@@ -53,11 +30,12 @@
 
 % All information in this block is optional, comment out any lines you don't need
 \title{Curriculum Vitae}
-\address{Amiraalin Puistotie 6 B 15}{02320, Espoo}
+\address{\haddress}{\pobox}
 \mobile{+358 50 300 2509}
 \email{robert.sirvio@helsinki.fi}
-\photo[80pt][0.4pt]{pictures/CV_photo} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
-\quote{Olen talouselämästä, ohjelmoinnista ja haasteista pitävä  monipuolisen työkokemuksen omaava luonnontieteiden kandidaatti Helsingin yliopiston finanssi- ja vakuutusmatematiikan linjalta. Olen myös opiskellut paljon tietojenkäsittelyä ja numeerista matematiikkaa.}
+\photo[80pt][1pt]{pictures/CV_photo.png} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
+\personalinfo{\hpinfo}
+\quote{\hquote}
 
 %----------------------------------------------------------------------------------------
 
@@ -69,86 +47,102 @@
 %	Koulutus
 %----------------------------------------------------------------------------------------
 
+%\section{Education}
 \section{Koulutus}
+%\section{Utbildning}
 
-\cventry{2014--}{Filosofian Maisteri}{Helsingin yliopisto}{}{valmistun 2015-2016}{}
-\cventry{2010--2014}{Luonnontieteiden Kandidaatti}{Helsingin yliopisto}{}{}{}
-\cventry{2009--2010}{Asepalvelus}{Laivaston soittokunta, Turku}{}{}{}
-\cventry{2005--2008}{Ylioppilas}{Tölö Gymnasium, Helsinki}{}{}{}
+\cventry{2014--}{\mdeg}{\uni}{}{\gradestim}{}
+\cventry{2010--2014}{\bdeg}{\uni}{}{}{}
+\cventry{2009--2010}{\army}{\armybase}{}{}{}
 
-\section{Kandidaatin Tutkinto}
+%\section{Bachelor thesis}
+\section{Kandidaatin tutkinto}
+%\section{Kandidatavhandling}
 
-\cvitem{Otsikko}{Prissättning av optioner och den diskreta Black-Scholes modellen}
-\cvitem{Ohjaaja}{Hans-Olav Tylli}
-\cvitem{Kuvaus}{Tutkintotyö käsittelee optioiden hinnoittelua diskreetin Black-Scholes mallin avulla (tunnetaan myös yleisesti Cox-Ross-Rubenstein mallina)}
+\cvitem{\bfseries \topic}{Prissättning av optioner och den diskreta Black-Scholes modellen}
+\cvitem{\bfseries \supervisor}{Hans-Olav Tylli}
+\cvitem{\bfseries \descr}{\descrcontent}
+
 %----------------------------------------------------------------------------------------
 %	Työkokemus
 %----------------------------------------------------------------------------------------
+%\section{Employment}
 \section{Työkokemus}
+%\section{Arbetserfarenhet}
 
-\cventry{2011--}{Ohjelmistoasiantuntija}{\textsc{Simtech Systems Inc. Oy}}{}{}{Vastuualueeni on virtaus- ja lämmönsiirtosimulointien ajaminen, tulosten analysointi sekä raportointi asiakkaille (pääosin eri valimoille). Simulointien ajo vaatii usein myös CAD-mallien työstöä sekä uusien osien mallinnusta. Olen myös toiminut koulutustehtävissä sekä kansainvälisten että suomailaisten asiakkaiden kanssa. Työssa käytän suomen lisäksi englantia päivittäin. Työssäni kiitosta olen saanut erityisesti monipuolisesta osaamisestani ohjelmoinnissa ja tietokoneohjelmien käytössä, sekä kielitaidosta. Keskeisimmät työkalut työssäni ovat
-\begin{itemize}
-\item Flow-3D
- \begin{itemize}
- \item Numeerisen virtausdynamiikan laskentaohjelma.
- \end{itemize}
- \item Solidworks
- \begin{itemize}
- \item CAD-mallinnusohjelma.
- \end{itemize}
-\end{itemize}
-}
-%------------------------------------------------
+\cventry{06/2015--09/2015}{Portfolio management associate}{\textsc{Estlander \& Partners OY}}{}{}{\epcontent}
+\newpage
+\cventry{11/2014--}{Junior full stack developer}{\textsc{Valuatum oy}}{}{}{\valuatumcontent}
 
-\cventry{2009--2011}{Tekninen työntekijä}{\textsc{Söderkullan Apteekki}}{}{}{Huolehdin varaston ylläpidosta, tavaran vastaanotosta sekä somistuksesta. Myös lääkekuljetukset ja siivous kuului työnkuvaani. Käytin päivittäin työssä suomea ja ruotsia.}
+\cventry{09/2014--01/2015}{\assari}{\textsc{\uni}}{}{}{\assaricontent}
 
-%------------------------------------------------
+\cventry{01/2011--09/2014}{\simtech}{\textsc{Simtech Systems Inc. Oy}}{}{}{\simtechcontent}
 
-\cventry{2007--2009}{Trukkikuski/Varastotyöntekijä}{\textsc{Oy Hedengren Ab}}{}{\textit{Kesätyö}}{Työssäni ajoin trukkia ja huolehdin tilausten keräyksestä, pakkaamisesta sekä lähettämisestä. Työ vaati hyvän fyysisen kunnon lisäksi erityistä huolellisuutta sekä lähetyksiä koottaessa että raskaita työkoneita käsiteltäessä, mistä sainkin kehuja.}
+\cventry{01/2010--12/2014}{\tutor}{}{}{}{\tutorcontent}
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------
 %	Muu osaaminen
 %----------------------------------------------------------------------------------------
 
-\section{Ohjelmointi-kielitaito}
-\cvitemwithcomment{\bfseries Alkeet}{\mdseries Fortran, Clojure, JavaScript, Shell script (Bash)}{}
-\cvitemwithcomment{\bfseries Hallitsen}{\mdseries Java, C/C++, MATLAB, SQL, HTML, \LaTeX}{}
-\cventry{}{}{}{Suurempiin projekteihin kuuluu mm. tietokantasovellus, jonka tuloksena oli verkkosovelluksena toteutettu elokuvatietokanta, sekä projektityönä toteutettu äänen muodostuksen inversion konstruointi MATLAB:n avulla. Tietokantasovelluksen tietokanta toteutettiin PostgreSQL:n avulla.}{}{}
+%\section{Programming skills}
+\section{Ohelmointitaidot}
+%\section{Programmeringskunskaper}
+
+\cvdoubleitem[.3cm]{\langscript}
+             {Java, C/C++, JavaScript, HTML, CSS, SQL, Bash, Fortran, MATLAB, Clojure,  \LaTeX}
+             {\techframe}
+             {Spring, JUnit, Mockito, JRebel, Struts2, jQuery, JSP, FusionCharts, JBoss, Tomcat, AWS, git, SVN}
+\cvdoubleitem[.3cm]{OS}
+             {Linux, Windows}
+             {\db}
+             {MySQL, PostgreSQL}
+\cvitem{\methods}{\methodscontent}
 
 %----------------------------------------------------------------------------------------
 %	LANGUAGES SECTION
 %----------------------------------------------------------------------------------------
 
+%\section{Languages}
 \section{Kielitaito}
+%\section{Språkkunskaper}
 
-\cvitemwithcomment{\bfseries Äidinkieli}{\mdseries Ruotsi}{}
-\cvitemwithcomment{\bfseries Erinoimainen}{\mdseries Suomi Englanti}{}
-\cvitemwithcomment{\bfseries Alkeet}{\mdseries Japani}{}
+\cvitemwithcomment{\bfseries \native}{\mdseries \swedish}{}
+\cvitemwithcomment{\bfseries \excellent}{\mdseries \finnish{} \english}{}
+\cvitemwithcomment{\bfseries \basics}{\mdseries \japanese{} \german}{}
 
 %----------------------------------------------------------------------------------------
 %	INTERESTS SECTION
 %----------------------------------------------------------------------------------------
 
-\section{Harrastukset}
-%
-%\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
-%
-%\cvlistdoubleitem{Piano}{Chess}
-%\cvlistdoubleitem{Cooking}{Dancing}
-%\cvlistitem{Running}
-\cventry{}{}{}{Harrastan monipuolisesti liikuntaa, mm. uintia sekä kuntosaliharjoittelua. Olen myös soittanut trumpettia ja kitaraa 12 vuoden, joten musiikki on lähellä sydäntä.}{}{}
+%\section{Harrastukset}
+%%
+%%\renewcommand{\listitemsymbol}{-~} % Changes the symbol used for lists
+%%
+%%\cvlistdoubleitem{Piano}{Chess}
+%%\cvlistdoubleitem{Cooking}{Dancing}
+%%\cvlistitem{Running}
+%\cventry{}{}{}{Harrastan monipuolisesti liikuntaa, mm. uintia sekä kuntosaliharjoittelua. Olen myös soittanut trumpettia ja kitaraa 12 vuoden, joten musiikki on lähellä sydäntä.}{}{}
 
 %----------------------------------------------------------------------------------------
 %	LINKS
 %----------------------------------------------------------------------------------------
+%\section{Links}
 \section{Linkkejä}
+%\section{Länkar}
 \cventry{}{}{}{
- \href{https://github.com/plhrja/B.Sc}{{\color{blue}Tutkintotyö kandidaatin tutkintoa varten.}}}{}{}
+ \href{http://www.cs.helsinki.fi/u/rsirvio/BinModKandi.pdf}{{\color{blue}\bthesis}}}{}{}
+
+%\cventry{}{}{}{
+% \href{https://github.com/lybeck/glottal-inversion}{{\color{blue}Äänenmuodostuksen inversion projekti ja siihen liittyvät MATLAB-tiedostot.}}
+%}{}{}
+
+%\cventry{}{}{}{
+% \href{https://t-llybeck.users.cs.helsinki.fi/mosedb/login.jsp}{{\color{blue}Log in sivu elokuvatietokannan verkkosovellukseen (username, password: guest)}}
+%}{}{}
 
 \cventry{}{}{}{
- \href{https://github.com/lybeck/glottal-inversion}{{\color{blue}Äänenmuodostuksen inversion projekti ja siihen liittyvät MATLAB-tiedostot.}}
-}{}{}
-%%----------------------------------------------------------------------------------------
+ \href{http://finland.e-research.fi/FreeTrial.action?lang=en}{{\color{blue}\freetrial}}}{}{}
+%----------------------------------------------------------------------------------------
 %%	COVER LETTER
 %%----------------------------------------------------------------------------------------
 %
