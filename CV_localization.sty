@@ -12,7 +12,9 @@
 %													Macros
 % ---------------------------------------------------------------------------------------------------------
 
-\RequirePackage[utf8]{inputenc}
+\RequirePackage[utf8]{luainputenc}
+\RequirePackage{textcomp}
+\RequirePackage{fontawesome}
 
 \newcommand*{\lentry}[3]{%
 	\ifthenelse{\equal{\langname}{english}}{#1}{%
@@ -137,9 +139,9 @@ Engelska%
 }%
 
 \newcommand*{\epcontent}{\lentry{%
-The research for my master thesis was done for Estlander \& Partners. The main topic in my research was time series modelling of commodity futures utilizing Bayesian filtering algorithms.%
+The research for my master thesis was done for Estlander \& Partners. The main topic in my research was time series modelling of commodity futures utilizing Bayesian filtering algorithms. The objective is to produce a model that is able to quantify basis risk by simulating commodity spot price dynamics.%
 }{%
-Tutkimustyön maisterin tutkintoani varten tein Estlander \& Partners:lle. Tutkimustyöni keskittyi hyödyke-, ja raaka-aine futuurien aikasarjamallinnukseen bayesilaisen filtteröintialgoritmin avulla.%
+Tutkimustyön maisterin tutkintoani varten tein Estlander \& Partners:lle. Tutkimustyöni keskittyi hyödyke-, ja raaka-ainefutuurien aikasarjamallinnukseen bayesilaisen filtteröintialgoritmin avulla. Työn tavoitteena on luoda hyödykkeiden ja raaka-aineiden spot-hintojen mallinnusta hyödyntävä riskimitta.%
 }{%
 Jag gjorde mitt forskningsarbete inför min magisterutbildning för Estlander \& Partners. I mitt forskningsarbete fokuserade jag mig i tidsseriemodellering av råvaro-futurer med hjälpa Bayesiska filteralgoritmer.%
 }%
@@ -211,7 +213,7 @@ Född 10.6.1989%
 \newcommand*{\hquote}{\lentry{%
 I am a graduate student at Helsinki university majoring in computer assisted mathematics. My fields of interest also include financial mathematics and computer science. I have been very successful in my studies, which in turn has had an influence in my versatile employment history.%
 }{%
-Olen matematiikasta, ohjelmoinnista ja haasteista pitävä  monipuolisen työkokemuksen omaava luonnontieteiden kandidaatti Helsingin yliopiston tietokoneavusteisen matematiikan linjalta. Olen myös opiskellut paljon tietojenkäsittelyä sekä finanssi- ja vakuutusmatematiikkaa. Hyvä menestykseni opinnoissani heijastuu monipuoliseen työkokemukseeni.%
+Olen matematiikasta, ohjelmoinnista ja haasteista pitävä luonnontieteiden kandidaatti Helsingin yliopiston tietokoneavusteisen matematiikan linjalta. Olen myös opiskellut paljon tietojenkäsittelyä sekä finanssi- ja vakuutusmatematiikkaa. Hyvä menestykseni opinnoissani heijastuu monipuoliseen työkokemukseeni.%
 }{%
 Jag är kandidat i naturvetenskaper och studerar matematik inom linjen finans- och försäkringsmatematik vid Helsingfors universitet. Jag har även betonat starkt numerisk matematik och informationsbehandling i mina studier. Detta kombinerat med de senaste arbetserfarenheterna som software consultant har gett mig färdigheter till många olika roller inom arbetslivet.%
 }%
@@ -235,6 +237,15 @@ Språk \\\& \\Scripting%
 }%
 }
 
+\newcommand*{\linkedin}{\lentry{%
+Linked\faLinkedinSign\quad (fi.linkedin.com/in/rsirvio)%
+}{%
+Linked\faLinkedinSign\quad (fi.linkedin.com/in/rsirvio)%
+}{%
+Linked\faLinkedinSign\quad (fi.linkedin.com/in/rsirvio)%
+}%
+}
+
 \newcommand*{\mdeg}{\lentry{%
 Master of Science%
 }{%
@@ -245,11 +256,11 @@ Filosofie Magister%
 }
 
 \newcommand*{\methods}{\lentry{%
-Methods%
+\textbf{Methods}%
 }{%
-Menetelmät%
+\textbf{Menetelmät}%
 }{%
-Metoder%
+\textbf{Metoder}%
 }%
 }
 
@@ -281,18 +292,18 @@ Modersmål%
 }%
 
 \newcommand*{\simtech}{\lentry{%
-Software expert%
+CFD Analyst%
 }{%
-Ohjelmistoasiantuntija%
+CFD Analyst%
 }{%
-Software expert%
+CFD Analyst%
 }%
 }%
 
 \newcommand*{\simtechcontent}{\lentry{%
-My responsibility was running fluid interaction and heat transfer simulations, analysing the results and finally giving reports on the simulations to different customers (mostly foundries). The main tools I used was Flow3D (CFD software) and Solidworks (CAD modelling software). I have also held training sessions for numerous Finnish and international customers. My expertise in programming and customer relations were highly appreciated by my employer.%
+My responsibility was running fluid interaction and heat transfer simulations, analysing the results and finally giving reports on the simulations to different customers (mostly foundries). The main tools I used was Flow3D (CFD software) and Solidworks (CAD modelling software). I have also held training sessions for numerous Finnish and international customers.%
 }{%
-Vastuualueeni on virtaus- ja lämmönsiirtosimulointien ajaminen, tulosten analysointi sekä raportointi asiakkaille (pääosin eri valimoille). Keskeisimmät työkalut työssäni olivat Flow3D (virtausten ja lämmönsiirrön mallinusohjelmisto) sekä Solidworks (CAD ohjelmisto). Olen myös toiminut koulutustehtävissä sekä kansainvälisten että suomailaisten asiakkaiden kanssa. Työssa käytän suomen lisäksi englantia päivittäin. Työssäni kiitosta olen saanut erityisesti monipuolisesta osaamisestani ohjelmoinnissa ja tietokoneohjelmien käytössä, sekä kielitaidosta.%
+Vastuualueeni oli virtaus- ja lämmönsiirtosimulointien ajaminen, tulosten analysointi sekä raportointi asiakkaille (pääosin eri valimoille). Keskeisimmät työkalut työssäni olivat Flow3D (virtausten ja lämmönsiirrön mallinusohjelmisto) sekä Solidworks (CAD ohjelmisto). Olen myös toiminut koulutustehtävissä sekä kansainvälisten että suomailaisten asiakkaiden kanssa.%
 }{%
 Till mitt ansvarsområde hörde simuleringar av ström- och värmeöverföring, analys av resultaten och framställning av denna analys till kunder (huvudsakligen till olika gjuterier). Simuleringarna kräver, förutom behärskandet av CFD programmet, förmågan att bearbeta CAD-modeller och även skapa nya modeller. Jag har även genomfört olika utbildningsuppdrag för finska och internationella kunder. Förutom finska använde jag engelska dagligen i mina arbetsuppdrag. Beröm har jag fått speciellt för mina mångsidiga kunskaper inom programmering och för mina språkkunskaper.%
 }%
