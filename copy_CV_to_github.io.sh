@@ -18,7 +18,7 @@ while test $# -gt 0; do
 			shift
                         ;;
 
-		-fin|--finnish)
+		-fi|--finnish)
 			SUFFIX="fi"
 			shift
                         ;;

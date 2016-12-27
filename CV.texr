@@ -6,8 +6,6 @@
 %	The localizations are in the CV_localization.sty file.
 %
 %	NOTE! Needs to be compiled with lualatex!
-%	NOTE2! The 'LOCALIZATION' blocks are important, as they mark the manual 
-%		localization positions (handled by change_locale.sh)!
 %
 %----------------------------------------------------------------------------------------
 
@@ -17,7 +15,7 @@
 \moderncvcolor{Roope} % CV color - options include: 'blue' (default), 'orange', 'green', 'red', 'purple', 'grey' and 'black'
 
 % Locale
-\def \langname {english}
+\def \langname {finnish}
 
 \renewcommand*{\cventry}[7][.25em]{%
   \cvitem[#1]{#2}{%
@@ -28,13 +26,11 @@
     \strut%
     \ifx&#7&%
       \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
-      
-\renewcommand{\linkedin}{Linked\tikz[baseline=(i.text)]\node[fill=blue,rounded corners=0.25ex,text=white,inner sep=0.3ex](i) {in};}
 
 \usepackage[utf8]{luainputenc}
 \usepackage{textcomp}
+\usepackage{fontawesome}
 \usepackage{fontspec}
-\usepackage{tikz}
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
 \usepackage[scale=0.75]{geometry} % Reduce document margins
 \setlength{\hintscolumnwidth}{2.5cm} % Uncomment to change the width of the dates column
