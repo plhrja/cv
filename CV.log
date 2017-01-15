@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2016.8.23)  15 JAN 2017 16:35
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2016.8.23)  15 JAN 2017 17:21
  restricted \write18 enabled.
 **CV.tex
 (./CV.tex
@@ -484,7 +484,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.068 seconds)
+luaotfload | main : initialization completed in 0.062 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX.
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTe
@@ -1351,6 +1351,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 63--63
 uc)(compiling luc: /var/lib/texmf/luatex-cache/generic/fonts/otf/lmsans12-obliqu
 e.luc)(load luc: /home/woope/.texmf-var/luatex-cache/generic/fonts/otf/lmsans12-
 oblique.luc)
+Underfull \hbox (badness 1292) in paragraph at lines 87--87
+\EU2/lmss/m/n/12 Keskeis-inä teemoina tutkiel-massa ovat fu-tu-uri-markki-noid
+en mallinnus
+ []
+
 
 LaTeX Font Warning: Font shape `EU2/lmss/m/sc' in size <12> not available
 (Font)              Font shape `EU2/lmr/m/sc' tried instead on input line 100.
@@ -1401,6 +1406,11 @@ Underfull \hbox (badness 2478) in paragraph at lines 123--123
 \EU2/lmss/m/n/12 Robot Frame-work, JBoss,
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 127--127
+[][]\EU2/lmss/m/n/12 MySQL,Post-greSQL,
+ []
+
 LaTeX Font Info:    Font shape `EU2/lmss/m/it' in size <10> not available
 (Font)              Font shape `EU2/lmss/m/sl' tried instead on input line 140.
 [2]
@@ -1416,18 +1426,18 @@ Package rerunfilecheck Warning: File `CV.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `CV.out':
-(rerunfilecheck)             Before: 46E0113C1DAF3EF08B9FE5265A892F88;572
-(rerunfilecheck)             After:  E19D48256C98573FCFE5552736836F36;594.
+(rerunfilecheck)             Before: E19D48256C98573FCFE5552736836F36;594
+(rerunfilecheck)             After:  46E0113C1DAF3EF08B9FE5265A892F88;572.
 )
 
 Here is how much of LuaTeX's memory you used:
  36153 strings out of 495004
  100000,953878 words of node,token memory allocated
- 831 words of node memory still in use:
-   17 hlist, 4 vlist, 5 rule, 1 disc, 4 glue, 12 kern, 15 glyph, 23 attribute, 5
-9 glue_spec, 23 attribute_list, 2 write, 1 pdf_refximage, 6 pdf_colorstack, 1 pd
-f_setmatrix, 1 pdf_save, 1 pdf_restore nodes
-   avail lists: 1:1,2:882,3:229,4:1052,5:128,6:2284,7:65,8:9,9:355,10:197
+ 798 words of node memory still in use:
+   17 hlist, 4 vlist, 5 rule, 4 glue, 12 kern, 11 glyph, 23 attribute, 59 glue_s
+pec, 23 attribute_list, 2 write, 1 pdf_refximage, 6 pdf_colorstack, 1 pdf_setmat
+rix, 1 pdf_save, 1 pdf_restore nodes
+   avail lists: 1:1,2:882,3:232,4:980,5:127,6:2376,7:65,8:9,9:355,10:195
  38663 multiletter control sequences out of 65536+600000
  47 fonts using 3848807 bytes
  59i,15n,69p,767b,791s stack positions out of 5000i,500n,10000p,200000b,100000s
@@ -1440,7 +1450,7 @@ re/texmf/fonts/opentype/public/lm/lmsans10-regular.otf></usr/share/texmf/fonts/o
 pentype/public/lm/lmsans12-regular.otf></usr/share/texmf/fonts/opentype/public/l
 m/lmsans17-regular.otf><</usr/share/texlive/texmf-dist/fonts/type1/public/marvos
 ym/marvosym.pfb>
-Output written on CV.pdf (2 pages, 231910 bytes).
+Output written on CV.pdf (2 pages, 231671 bytes).
 
 PDF statistics: 121 PDF objects out of 1000 (max. 8388607)
  87 compressed objects within 1 object stream
