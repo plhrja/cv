@@ -46,6 +46,8 @@ echo "Copying $1 to $DEST with suffix $SUFFIX"
 
 TRG=$(echo $1 | sed "s/.pdf$/_$SUFFIX.pdf/")
 TRG=$DEST$TRG
+
+echo $TRG
 cp $1 $TRG
 
 echo "Copying finished!"

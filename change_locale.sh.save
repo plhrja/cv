@@ -1,0 +1,37 @@
+#!/bin/bash
+#
+# Helper script for changing the locale of the CV.
+# The localized section need to be nested in a '%@@@LOCALIZATION@@@' block.
+
+# Stop execution on error.
+set -e
+LANG=
+
+# Check for flags.
+while test $# -gt 0; do
+        case "$1" in
+                -en|--english)
+                        LANG="en"
+                        shift
+                        ;;
+
+                -fi|--finnish)
+                        LANG="fi"
+                        shift
+                                   -fi|--finnish)
+                        LANG="fi"
+                        shift
+                        ;;
+     ;;
+
+                *)
+                        break
+                        ;;
+        esac
+done
+
+if [ $# -ne 1 ]; then
+        echo "Provide a single input file for copying!"
+        exit 1
+fi
+

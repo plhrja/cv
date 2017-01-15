@@ -48,11 +48,12 @@ fi
 
 echo "Changing locale to $LANG..."
 
-# Clean
+# Clean all previous comments
 sed -i "/@@@LOCALIZATION@@@/{n;s/%//}" $1
 sed -i "/@@@LOCALIZATION@@@/{n;n;s/%//}" $1
 sed -i "/@@@LOCALIZATION@@@/{n;n;n;s/%//}" $1
 
+# Comment out the irrelevant sections 
 case $LANG in
         en)
                 sed -i "/@@@LOCALIZATION@@@/{n;n;s/^/%/}" $1
