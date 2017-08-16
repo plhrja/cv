@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2016.8.23)  15 JAN 2017 17:21
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2016.8.23)  16 AUG 2017 19:08
  restricted \write18 enabled.
 **CV.tex
 (./CV.tex
@@ -484,7 +484,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.062 seconds)
+luaotfload | main : initialization completed in 0.064 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX.
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTe
@@ -1450,7 +1450,7 @@ re/texmf/fonts/opentype/public/lm/lmsans10-regular.otf></usr/share/texmf/fonts/o
 pentype/public/lm/lmsans12-regular.otf></usr/share/texmf/fonts/opentype/public/l
 m/lmsans17-regular.otf><</usr/share/texlive/texmf-dist/fonts/type1/public/marvos
 ym/marvosym.pfb>
-Output written on CV.pdf (2 pages, 231671 bytes).
+Output written on CV.pdf (2 pages, 231651 bytes).
 
 PDF statistics: 121 PDF objects out of 1000 (max. 8388607)
  87 compressed objects within 1 object stream

@@ -1,29 +1,12 @@
-# README #
+# CV #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+### Scripts  ###
 
-### What is this repository for? ###
-
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* *change_locale.sh*
+	* Change the localization for both content and section of the given .tex file
+	* Example: bash change_locale.sh -en CV.tex 
+* *copy_CV_to_github.io.sh*
+	* Copies the given file to the github hosting repo with the flagged suffix
+	* Example: bash copy_CV_to_github.io.sh -en CV.pdf
+* *publish.sh*
+	* Builds the CV and performs a copy to the github hosting repo in both en\_US and fi\_FI locales.
