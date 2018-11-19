@@ -1,4 +1,4 @@
-This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2016.8.23)  16 AUG 2017 19:08
+This is LuaTeX, Version beta-0.80.0 (TeX Live 2015/Debian) (rev 5238)  (format=lualatex 2018.10.16)  6 NOV 2018 22:19
  restricted \write18 enabled.
 **CV.tex
 (./CV.tex
@@ -484,7 +484,7 @@ Inserting `luaotfload.aux.set_capheight' at position 3 in `luaotfload.patch_font
 '.
 Inserting `luaotfload.rewrite_fontname' at position 4 in `luaotfload.patch_font'
 .
-luaotfload | main : initialization completed in 0.064 seconds)
+luaotfload | main : initialization completed in 0.061 seconds)
 Lua module: fontspec 2016/02/01 2.5a Advanced font selection for LuaLaTeX.
 (/usr/share/texlive/texmf-dist/tex/latex/fontspec/fontspec-luatex.sty
 Package: fontspec-luatex 2016/02/01 v2.5a Font selection for XeLaTeX and LuaLaTe
@@ -1392,18 +1392,13 @@ Overfull \hbox (2.36803pt too wide) in paragraph at lines 108--108
 (compiling luc: /var/lib/texmf/luatex-cache/generic/fonts/otf/lmsans8-regular.lu
 c)(load luc: /home/woope/.texmf-var/luatex-cache/generic/fonts/otf/lmsans8-regul
 ar.luc)
-Underfull \hbox (badness 4279) in paragraph at lines 123--123
-\EU2/lmss/m/n/12 TypeScript, HTML, CSS,
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 123--123
 [][]\EU2/lmss/m/n/12 Spring, JU-nit, Mock-ito,
  []
 
 
-Underfull \hbox (badness 2478) in paragraph at lines 123--123
-\EU2/lmss/m/n/12 Robot Frame-work, JBoss,
+Underfull \hbox (badness 10000) in paragraph at lines 123--123
+\EU2/lmss/m/n/12 .NET, Moq, An-gu-larJS,
  []
 
 
@@ -1437,7 +1432,7 @@ Here is how much of LuaTeX's memory you used:
    17 hlist, 4 vlist, 5 rule, 4 glue, 12 kern, 11 glyph, 23 attribute, 59 glue_s
 pec, 23 attribute_list, 2 write, 1 pdf_refximage, 6 pdf_colorstack, 1 pdf_setmat
 rix, 1 pdf_save, 1 pdf_restore nodes
-   avail lists: 1:1,2:882,3:232,4:980,5:127,6:2376,7:65,8:9,9:355,10:195
+   avail lists: 1:1,2:878,3:227,4:970,5:122,6:2352,7:77,8:9,9:354,10:197
  38663 multiletter control sequences out of 65536+600000
  47 fonts using 3848807 bytes
  59i,15n,69p,767b,791s stack positions out of 5000i,500n,10000p,200000b,100000s
@@ -1450,7 +1445,7 @@ re/texmf/fonts/opentype/public/lm/lmsans10-regular.otf></usr/share/texmf/fonts/o
 pentype/public/lm/lmsans12-regular.otf></usr/share/texmf/fonts/opentype/public/l
 m/lmsans17-regular.otf><</usr/share/texlive/texmf-dist/fonts/type1/public/marvos
 ym/marvosym.pfb>
-Output written on CV.pdf (2 pages, 231651 bytes).
+Output written on CV.pdf (2 pages, 231542 bytes).
 
 PDF statistics: 121 PDF objects out of 1000 (max. 8388607)
  87 compressed objects within 1 object stream
