@@ -1,5 +1,12 @@
-# all log files
+# All log files
 *.log
 *.aux
 *.dvi
 *.out
+
+# Compiled TeX
+*.pdf
+
+# Misc
+*.save
+*.texr
