@@ -7,7 +7,7 @@ echo "Starting the copy process..."
 # Stop execution on error.
 set -e
 
-DEST="/home/woope/plhrja.github.io/"
+DEST="/home/woope/git/plhrja.github.io/"
 SUFFIX=
 
 # Check for flags.
