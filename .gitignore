@@ -3,6 +3,8 @@
 *.aux
 *.dvi
 *.out
+*.fdb_latexmk
+*.fls
 
 # Compiled TeX
 *.pdf
