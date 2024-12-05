@@ -12,3 +12,6 @@
 # Misc
 *.save
 *.texr
+
+# Cover letters
+cover-letter*
