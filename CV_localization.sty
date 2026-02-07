@@ -31,9 +31,9 @@
 % ---------------------------------------------------------------------------------------------------------
 
 \newcommand*{\analysepacontent}{\lentry{%
-While still retaining a hands-on orientation, my transition into the Principal Architect role reflects a broader shift in focus—from Platform Engineering to a more comprehensive, application-wide architectural perspective. I have played a key role in evolving existing ecosystems; for instance, I conceived and implemented an end-to-end proof of concept for integrating a BI platform into one of our multi-tenant SaaS offerings, significantly reducing our time to market in an emerging product segment. I also play a key role in designing architectures and implementations for greenfield capabilities, as demonstrated by a project in which we implemented an agentic AI solution to automatically generate insights on customer and competitor positioning in the retail market, using multiple data sources both in-house and external.%
+While still retaining a hands-on orientation, my transition into the Principal Architect role reflects a broader shift in focus—from Platform Engineering to a more comprehensive, application-wide architectural perspective. I have played a key role in evolving existing ecosystems; for instance, I conceived and implemented an end-to-end proof of concept for integrating a BI platform into one of our multi-tenant SaaS offerings, significantly reducing our time to market in an emerging product segment. I also play a key role in designing architectures and implementations for greenfield capabilities, as demonstrated by a project in which we are implementing an agentic AI solution to generate insights on customer and competitor positioning in the retail market, using multiple data sources both in-house and external.%
 }{%
-Työnäni on modernin ja responsiivisen single-page web-applikaation kehitys, osana erittäin ammattitaitoista ketterää kehitystiimiä. Tuote on vähittäiskauppamarkkinoille suunnattu valikoima-, sekä hinnoittelutyökalu. Applikaation palvelinpuoli on toteutettu ASP.NET Core REST API:na, sekä selainpuoli MVVM-pattern toteutuksena pohjautuen mm. TypeScript, Angular sekä mobx teknologioihin.
+Siirtymäni Principal Architect -rooliin kuvastaa fokukseni laajenemista Platform Engineeringistä kohti kokonaisvaltaisempaa, sovellustason arkkitehtuurinäkökulmaa, säilyttäen edelleen hands-on otteen tekemiseen. Olen ollut keskeisessä roolissa olemassa olevien ekosysteemien kehittämisessä; esimerkiksi suunnittelin ja toteutin konseptitodistuksen BI-alustan integroimiseksi yhteen multi-tenant SaaS-tuotteistamme, mikä mahdollisti merkittävän markkinosuuden voittamisen uudessa markkinasegmentissä. Lisäksi olen avainroolissa uusien ratkaisujen arkkitehtuurien ja toteutusten suunnittelussa, mistä esimerkkinä projekti, jossa toteutamme agenttipohjaisen tekoälyratkaisun tuottamaan havaintoja vähittäiskauppamarkkinan asiakas- ja kilpailijapositioinnista hyödyntäen useita tietolähteitä, sekä talon sisältä että ulkopuolelta.%
 }{%
 Helsingfors Universitet%
 }%
@@ -45,7 +45,11 @@ As a Cloud DevOps Architect my main focus had a strong Platform Engineering flav
 	\item The ETL pipeline evolution involved designing and implementing a serverless architecture based on SNS, SQS, AWS Lambda, Step Functions, EventBridge and EKS, integrated with our consolidated observability platform (Datadog).
 \end{itemize}%
 }{%
-Työnäni on modernin ja responsiivisen single-page web-applikaation kehitys, osana erittäin ammattitaitoista ketterää kehitystiimiä. Tuote on vähittäiskauppamarkkinoille suunnattu valikoima-, sekä hinnoittelutyökalu. Applikaation palvelinpuoli on toteutettu ASP.NET Core REST API:na, sekä selainpuoli MVVM-pattern toteutuksena pohjautuen mm. TypeScript, Angular sekä mobx teknologioihin.
+Cloud DevOps -arkkitehtina pääfokukseni oli vahvasti Platform Engineering -painotteinen. Laajan Kubernetes- ja in-house GitLab-alustamme arkkitehtuurisuunnittelun ja kehityksen ohella merkittävimmät aloitteeni olivat siirtyminen yhden AWS-tilin mallista monitili-rakenteeseen, sekä eräajopohjaisen ETL-putken kehittäminen event-driven -mallin mukaiseksi.
+\begin{itemize}
+	\item Tilisiirtymä edellytti merkittäviä uudelleenjärjestelyjä verkkoarkkitehtuurissamme sekä laajaa automaatiota --- esimerkiksi tilien baseline-automaatiota ja policy-määrittelyjä. Nykyään uudet työkuormat provisioidaan automaattisesti uusille tileille, ja useita olemassa olevia työkuormia on migroitu uuteen organisaatiorakenteeseen.
+	\item ETL-putken kehityksessä olin suunnittelemassa ja toteutin serverless-arkkitehtuuriin pojautuvan ratkaisun, hyödyntäen SNS:ää, SQS:ää, AWS Lambdaa, Step Functionsia, EventBridgeä ja EKS:ää, integroituna konsolidoituun observability-alustaamme (Datadog).
+\end{itemize}%
 }{%
 Helsingfors Universitet%
 }%
@@ -63,7 +67,7 @@ Helsingfors Universitet%
 \newcommand*{\analysetlcontent}{\lentry{%
 I wanted to focus on the people and process aspects of software development, making this team lead position a perfect fit. The team was a newly formed, cross-functional group of Data Scientists and Data Engineers. Initially, my role was primarily oriented on our processes and team formation. Despite the challenges of the pandemic, we developed effective methods for collaboration and planning, which improved team cohesion, predictability, and overall well-being. Over time, my focus shifted to mentoring and implementing cloud-native technologies.%
 }{%
-Työnäni on modernin ja responsiivisen single-page web-applikaation kehitys, osana erittäin ammattitaitoista ketterää kehitystiimiä. Tuote on vähittäiskauppamarkkinoille suunnattu valikoima-, sekä hinnoittelutyökalu. Applikaation palvelinpuoli on toteutettu ASP.NET Core REST API:na, sekä selainpuoli MVVM-pattern toteutuksena pohjautuen mm. TypeScript, Angular sekä mobx teknologioihin.
+Halusin keskittyä ja kehittää enemmän pehmeitä taitojani ihmisten ja ohjelmistokehitysten prosessien parissa, jolloin tiiminvetäjän position aukeaminen sopi minulle erinomaisesti. Tiimi oli vastikään koottu, poikkitieteellinen ryhmä data science- ja data engineer -osaajia. Alussa työni painottui ennen kaikkea toimintatapojen rakentamiseen ja tiimin muotoutumiseen. Pandemian tuomista haasteista huolimatta kehitimme toimivat käytännöt yhteistyöhön ja suunnitteluun Scrum-kehyksen puitteissa, mikä paransi tiimihenkeä, ennakoitavuutta ja kokonaisvaltaista hyvinvointia. Ajan myötä fokukseni siirtyi yhä enemmän mentorointiin ja cloud-native-teknologioiden käyttöönottoon.%
 }{%
 Helsingfors Universitet%
 }%
@@ -135,9 +139,9 @@ Kandidatarbete%
 \newcommand*{\db}{\lentry{%
 \textbf{Database}%
 }{%
-Tietokannat%
+\textbf{Tietokannat}%
 }{%
-Databas%
+\textbf{Databaser}%
 }%
 }%
 
@@ -261,7 +265,7 @@ Född 10.6.1989%
 \newcommand*{\hquote}{\lentry{%
 Cloud and SaaS are my bread and butter. I take pride and enjoyment in owning the things I create - the ultimate measure of a solution's robustness, scalability and performance lies in its ability to withstand the test of time. I strive to maintain and communicate a comprehensive picture of product development, spanning from development processes and architecture to targets and requirements.%
 }{%
-Olen matematiikasta, ohjelmoinnista ja musiikista pitävä filosofian maisteri Helsingin yliopiston tietokoneavusteisen matematiikan linjalta. Olen myös opiskellut paljon tietojenkäsittelyä sekä finanssi- ja vakuutusmatematiikkaa. Hyvä menestykseni opinnoissani heijastuu monipuoliseen työkokemukseeni.%
+Pilvi ja SaaS ovat leipälajini. Omistajuus ja vastuullisuus ovat minulle ohjelmistokehityksessä kaikki kaikessa --- ratkaisun laatu, skaalautuvuus ja suorituskyky mitataan ratkaisun kyvyllä kestää ajan hammasta.%
 }{%
 Jag är kandidat i naturvetenskaper och studerar matematik inom linjen finans- och försäkringsmatematik vid Helsingfors universitet. Jag har även betonat starkt numerisk matematik och informationsbehandling i mina studier. Detta kombinerat med de senaste arbetserfarenheterna som software consultant har gett mig färdigheter till många olika roller inom arbetslivet.%
 }%
@@ -279,7 +283,7 @@ Japanska%
 \newcommand*{\langscript}{\lentry{%
 \textbf{Languages}%
 }{%
-Kielet \\\& \\Skriptaus%
+\textbf{Kielet}%
 }{%
 Språk \\\& \\Scripting%
 }%
@@ -306,16 +310,25 @@ Filosofie Magister%
 \newcommand*{\methods}{\lentry{%
 \textbf{Methodology}%
 }{%
-\textbf{Menetelmät \\\& \\Mallit}%
+\textbf{Menetelmät}%
 }{%
 \textbf{Metoder}%
+}%
+}
+
+\newcommand*{\platforms}{\lentry{%
+\textbf{OS/Platform}%
+}{%
+\textbf{Alustat}%
+}{%
+\textbf{Plattformar}%
 }%
 }
 
 \newcommand*{\methodscontent}{\lentry{%
 Platform Engineering, DevOps, CI/CD, IaC, OOP, TDD, REST, Agile, Scrum%
 }{%
-Olio-ohjelmointi, Reaktiivinen ohjelmointi, TDD, REST, MVVM, IaC, Continuous integration (Jenkins, TeamCity, GitLab), Ketterät menetelmät, Scrum%
+Platform Engineering, DevOps, CI/CD, IaC, OOP, TDD, REST, Agile, Scrum%
 }{%
 Object-oriented programming, Reactive programming, Test-driven development, UML, Agile methods, Scrum
 }%
@@ -424,7 +437,7 @@ Tutor%
 \newcommand*{\techframe}{\lentry{%
 \textbf{Tech \& FW}%
 }{%
-Teknologioita \\\& \\ Kehyksiä%
+\textbf{Teknologioita}%%
 }{%
 Teknologier \\\& \\ Frameworks%
 }%
