@@ -41,7 +41,7 @@ Helsingfors Universitet%
 \newcommand*{\analysedoacontent}{\lentry{%
 As a Cloud DevOps Architect my main focus had a strong Platform Engineering flavor. Alongside extensive architectural planning and development for our Kubernetes and in-house GitLab platforms, my biggest initiatives were migrating from a single AWS account -setup to a multi-account structure and also evolving our batch based ETL pipeline to an event-driven one. 
 \begin{itemize}
-	\item The account transition required major reorganizations of our networking infrastructure and substantial automation efforts — for example account baseline automation and policy definitions. Today, new workloads are provisioned with new accounts through a GitOps workflow, and multiple existing workloads have been migrated to the new organizational structure.
+	\item The multi-account setup was implemented through a landing zone with AWS Control Tower and Terraform to manage the infrastructure deployment in a GitOps fashion. The account transition required also major reorganizations of our networking infrastructure and substantial automation efforts — for example account baseline automation and policy definitions. Today, new workloads are provisioned with new accounts, and multiple existing workloads have been migrated to the new organizational structure.
 	\item The ETL pipeline evolution involved designing and implementing a serverless architecture based on SNS, SQS, AWS Lambda, Step Functions, EventBridge and EKS, integrated with our consolidated observability platform (Datadog). Being reactive and event-driven has significantly improved our lead time from once-per-day to minutes at best.%
 \end{itemize}%
 }{%
@@ -328,7 +328,7 @@ Filosofie Magister%
 \newcommand*{\methodscontent}{\lentry{%
 Platform Engineering, DevOps, GitOps, CI/CD, IaC, OOP, TDD, REST, Agile, Scrum%
 }{%
-Platform Engineering, DevOps, GitOps, CI/CD, IaC, OOP, TDD, REST, Agile, Scrum%
+Platform Engineering, DevOps, GitOps, CI/CD, IaC, OOP, TDD, REST, Scrum%
 }{%
 Object-oriented programming, Reactive programming, Test-driven development, UML, Agile methods, Scrum
 }%
