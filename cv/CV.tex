@@ -2,8 +2,9 @@
 %	CURRICULUM VITAE - ROBERT SIRVIÖ
 %	--------------------------------
 %
-%	Requires all the moderncv*.sty files a to be in the same folder (compile-time).
-%	The localizations are in the CV_localization.sty file.
+%	The vendored moderncv class/styles live in ../moderncv and the localizations in
+%	../CV_localization.sty; the latexmkrc in this folder puts both on TEXINPUTS.
+%	Build:	cd cv && latexmk CV.tex	(or: TEXINPUTS=../moderncv:..: lualatex CV.tex)
 %
 %	NOTE! Needs to be compiled with lualatex!
 %	NOTE2! The 'LOCALIZATION' blocks are important, as they mark the manual 
@@ -54,7 +55,7 @@
 \email{robert.sirvio@alumni.helsinki.fi}
 \photo[80pt][1pt]{pictures/rs_visma.jpg} % The first bracket is the picture height, the second is the thickness of the frame around the picture (0pt for no frame)
 \personalinfo{\href{https://www.credly.com/badges/38327cfe-dd39-4aa2-8758-a85937059066}{
-        \includegraphics[height=1.75cm]{aws-solution-architect-badge.png}}}
+        \includegraphics[height=1.75cm]{pictures/aws-solution-architect-badge.png}}}
 \quote{\small \hquote}
 
 %----------------------------------------------------------------------------------------
@@ -161,7 +162,7 @@
 % \begin{minipage}{0\columnwidth}
 %     \hfill
 %     \href{https://www.credly.com/badges/38327cfe-dd39-4aa2-8758-a85937059066}{
-%         \includegraphics[height=1.4cm]{aws-solution-architect-badge.png}
+%         \includegraphics[height=1.4cm]{pictures/aws-solution-architect-badge.png}
 %     }
 % \end{minipage}
  
