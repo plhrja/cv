@@ -1,0 +1,8 @@
+# latexmk configuration for building the CV from this folder.
+#
+# The vendored, locally patched moderncv v1.2.0 lives in ../moderncv and the
+# shared localisation package (CV_localization.sty) in the repo root. Both must
+# be searched BEFORE the system TeX tree, which ships moderncv 2.4.1: in-file
+# \input@path tricks do not work because the system class is found first.
+$pdf_mode = 4;                                  # 4 = lualatex
+ensure_path('TEXINPUTS', '../moderncv', '..');  # prepends; keeps the trailing separator so the system tree is still searched

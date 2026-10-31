@@ -5,18 +5,22 @@
 %	Uses the letter mode of the same (vendored, locally patched) moderncv v1.2.0 class
 %	as CV.tex, so the letter shares the CV's fonts, colours and the contact-info footer.
 %
-%	Usage:	cp CoverLetter_template.tex cover-letter-<company>.tex	(cover-letter* is git-ignored)
-%		lualatex cover-letter-<company>.tex
+%	Usage:	cd letters
+%		cp CoverLetter_template.tex cover-letter-<company>.tex	(cover-letter* is git-ignored)
+%		latexmk cover-letter-<company>.tex	(or: TEXINPUTS=../moderncv:..: lualatex ...)
+%
+%	The vendored moderncv class/styles live in ../moderncv and the localizations in
+%	../CV_localization.sty; the latexmkrc in this folder puts both on TEXINPUTS.
 %
 %	NOTE! Needs to be compiled with lualatex (same as CV.tex).
-%	NOTE2! Keep the preamble in sync with CV.tex if fonts, colours or margins change there.
+%	NOTE2! Keep the preamble in sync with ../cv/CV.tex if fonts, colours or margins change there.
 %
 %----------------------------------------------------------------------------------------
 
-\documentclass[11pt,a4paper,sans]{moderncv} % Same options as CV.tex
+\documentclass[11pt,a4paper,sans]{moderncv} % Same options as ../cv/CV.tex
 
-\moderncvstyle{casual} % Same style as CV.tex; 'casual' prints the contact info in the page footer
-\moderncvcolor{Roope} % Same colour scheme as CV.tex (footerColor = grey footer)
+\moderncvstyle{casual} % Same style as ../cv/CV.tex; 'casual' prints the contact info in the page footer
+\moderncvcolor{Roope} % Same colour scheme as ../cv/CV.tex (footerColor = grey footer)
 
 % Locale (flipped by change_locale.sh; \haddress and \pobox below follow it)
 \def \langname {english}
@@ -24,7 +28,7 @@
 \usepackage[utf8]{luainputenc}
 \usepackage{textcomp}
 \usepackage{fontspec}
-\usepackage[scale=0.75]{geometry} % Same margins as CV.tex
+\usepackage[scale=0.75]{geometry} % Same margins as ../cv/CV.tex
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION (printed in the footer, identical to the CV)
