@@ -168,11 +168,12 @@
     \fancyfoot[c]{%
       \parbox[b]{\footerwidth}{%
         \centering%
-        \addressfont\color{color2}%
+        % Roope-edit: same colour logic as \makecvfooter so the letter footer matches the CV footer
+        \@ifundefinedcolor{footerColor}{\color{color2}}{\color{footerColor}}\addressfont%
         \vspace{-\baselineskip}% to cancel out the extra vertical space taken by the name (below) and ensure perfect alignment of letter and cv footers
         % \strut{\bfseries\upshape\@firstname~\@familyname}\\% the \strut is required to ensure the line is exactly \baselineskip tall
         \ifthenelse{\isundefined{\@addressstreet}}{}{\addtofooter[]{\addresssymbol\@addressstreet}%
-          \ifthenelse{\equal{\@addresscity}{}}{}{\addtofooter[~--~]{\@addresscity}}\flushfooter\@firstfooterelementtrue\\}% if \addresstreet is defined, \addresscity will always be defined but could be empty
+          \if\relax\detokenize{\@addresscity}\relax{}\else\addtofooter[~--~]{\@addresscity}\fi\flushfooter\@firstfooterelementtrue\\}% Roope-edit: same test as \makecvfooter; \equal fully expands its argument and breaks on the \lentry localisation macros (\pobox)
         \ifthenelse{\isundefined{\@mobile}}{}{\addtofooter{\mobilesymbol\@mobile}}%
         \ifthenelse{\isundefined{\@phone}}{}{\addtofooter{\phonesymbol\@phone}}%
         \ifthenelse{\isundefined{\@fax}}{}{\addtofooter{\faxsymbol\@fax}}%

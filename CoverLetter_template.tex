@@ -1,0 +1,64 @@
+%----------------------------------------------------------------------------------------
+%	COVER LETTER TEMPLATE - ROBERT SIRVIÖ
+%	-------------------------------------
+%
+%	Uses the letter mode of the same (vendored, locally patched) moderncv v1.2.0 class
+%	as CV.tex, so the letter shares the CV's fonts, colours and the contact-info footer.
+%
+%	Usage:	cp CoverLetter_template.tex cover-letter-<company>.tex	(cover-letter* is git-ignored)
+%		lualatex cover-letter-<company>.tex
+%
+%	NOTE! Needs to be compiled with lualatex (same as CV.tex).
+%	NOTE2! Keep the preamble in sync with CV.tex if fonts, colours or margins change there.
+%
+%----------------------------------------------------------------------------------------
+
+\documentclass[11pt,a4paper,sans]{moderncv} % Same options as CV.tex
+
+\moderncvstyle{casual} % Same style as CV.tex; 'casual' prints the contact info in the page footer
+\moderncvcolor{Roope} % Same colour scheme as CV.tex (footerColor = grey footer)
+
+% Locale (flipped by change_locale.sh; \haddress and \pobox below follow it)
+\def \langname {english}
+
+\usepackage[utf8]{luainputenc}
+\usepackage{textcomp}
+\usepackage{fontspec}
+\usepackage[scale=0.75]{geometry} % Same margins as CV.tex
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION (printed in the footer, identical to the CV)
+%----------------------------------------------------------------------------------------
+
+\firstname{Robert}
+\familyname{Sirviö}
+\address{\haddress}{\pobox}
+\mobile{+358 503002509}
+\email{robert.sirvio@alumni.helsinki.fi}
+
+%----------------------------------------------------------------------------------------
+%	LETTER DETAILS
+%----------------------------------------------------------------------------------------
+
+\recipient{Company Oy}{Attn: Hiring Manager\\Street address 1\\00100 Helsinki} % Recipient (bold) and address; break lines with \\
+\date{\today} % Or a fixed date, e.g. \date{31 October 2026}
+\opening{Dear Hiring Manager,}
+\closing{Best regards,}
+\enclosure[Attached]{Curriculum Vitae} % Comment out if nothing is attached; the optional argument replaces the word "Enclosure"
+
+%----------------------------------------------------------------------------------------
+
+\begin{document}
+\makelettertitle % Recipient block, date and opening
+
+% Optional subject line (moderncv 1.2.0 has no \subject command):
+%{\bfseries Application: Principal Architect}\\[1em]
+
+[Opening paragraph: the position you are applying for, where you saw it, and the one-sentence reason you fit.]
+
+[Middle paragraph(s): two or three concrete achievements that match the role; point to the enclosed CV for the rest.]
+
+[Closing paragraph: what you would like to happen next, your availability, and thanks.]
+
+\makeletterclosing % Closing phrase, name and the enclosure line
+\end{document}
