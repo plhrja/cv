@@ -6,8 +6,9 @@
 %	as CV.tex, so the letter shares the CV's fonts, colours and the contact-info footer.
 %
 %	Usage:	cd letters
-%		cp CoverLetter_template.tex cover-letter-<company>.tex	(cover-letter* is git-ignored)
-%		latexmk cover-letter-<company>.tex	(or: TEXINPUTS=../moderncv:..: lualatex ...)
+%		cp cover-letter.template.tex cover-letter-<company>.tex	(every letters/*.tex except this file is git-ignored)
+%		latexmk -outdir=out cover-letter-<company>.tex	(or: TEXINPUTS=../moderncv:..: lualatex ...)
+%		Or let the Claude Code skill do it: .claude/skills/cover-letter/SKILL.md
 %
 %	The vendored moderncv class/styles live in ../moderncv and the localizations in
 %	../CV_localization.sty; the latexmkrc in this folder puts both on TEXINPUTS.
