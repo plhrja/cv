@@ -13,8 +13,12 @@
 *.save
 *.texr
 
-# Cover letters
-cover-letter*
+# Cover letters: only the template is tracked. Real letters
+# (letters/cover-letter-<company>.tex) and the out/ build dir are ignored.
+letters/*.tex
+!letters/cover-letter.template.tex
+letters/out/*
+!letters/out/.gitkeep
 
 # Postings
 job-postings
