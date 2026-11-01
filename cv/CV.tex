@@ -20,15 +20,35 @@
 % Locale
 \def \langname {english}
 
+\makeatletter
+% Page-breakable entries. The stock \cvitem wraps hint and content in a tabular,
+% which TeX can never split across pages; with long descriptions that left big
+% gaps at page bottoms. This version keeps the same two-column geometry (hint
+% right-aligned in \hintscolumnwidth, content in \maincolumnwidth) but typesets
+% the content as ordinary paragraphs, so an entry may continue on the next page.
+% Lone first/last lines are still forbidden at page breaks.
+\renewcommand{\cvitem}[3][.25em]{%
+  \par\begingroup
+    \setlength{\leftskip}{\hintscolumnwidth+\separatorcolumnwidth}%
+    \setlength{\@totalleftmargin}{\leftskip}% lists reset \leftskip but indent by this
+    \setlength{\linewidth}{\maincolumnwidth}%
+    \sloppy% the stock tabular cells were set \sloppy too
+    \clubpenalty\@M \@clubpenalty\@M \widowpenalty\@M%
+    \noindent\llap{\makebox[\hintscolumnwidth][r]{\hintstyle{#2}}\hspace*{\separatorcolumnwidth}}%
+    \strut#3\par
+  \endgroup
+  \addvspace{#1}}
+\makeatother
+
 \renewcommand*{\cventry}[7][.25em]{%
   \cvitem[#1]{#2}{%
     {\bfseries#3}%
-   	\if\relax\detokenize{#4}\relax{}\else{, {\slshape#4}}\fi%
+    \if\relax\detokenize{#4}\relax{}\else{, {\slshape#4}}\fi%
     \if\relax\detokenize{#5}\relax{}\else{ #5}\fi%
     \if\relax\detokenize{#6}\relax{}\else{ #6}\fi%
     \strut%
     \ifx&#7&%
-      \else{\newline{}\begin{minipage}[t]{\linewidth}\small#7\end{minipage}}\fi}}
+      \else{\par\nobreak{\small#7\par}}\fi}}% description as a plain paragraph (no minipage) so it can break across pages; \nobreak keeps the title with it
       
 \renewcommand{\linkedin}{Linked\tikz[baseline=(i.text)]\node[fill=blue,rounded corners=0.25ex,text=white,inner sep=0.3ex](i) {in};}
 
@@ -37,7 +57,9 @@
 \usepackage{fontspec}
 \usepackage{tikz}
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-\usepackage[scale=0.75]{geometry} % Reduce document margins
+\usepackage[hscale=0.75,top=1.2cm,bottom=2.0cm]{geometry} % Side margins as before (12.5% each).
+% Vertical margins are explicit: a plain scale=0.75 lets geometry split the free height 2:3,
+% i.e. ~30mm above and ~45mm below the text (the footer only needs ~12mm of the latter).
 \setlength{\hintscolumnwidth}{2.5cm} % Uncomment to change the width of the dates column
 %\setlength{\makecvtitlenamewidth}{10cm} % For the 'classic' style, uncomment to adjust the width of the space allocated to your name
 
@@ -83,7 +105,10 @@
 %\section{Arbetserfarenhet}
 %@@@@@@@@@@@@@@@@@@
 
-\cventry{02/2024--}{Principal Architect}{\textsc{Analyse²}}{}{}{\analysepacontent}
+
+\cventry{08/2026--}{Senior Cloud Engineer}{\textsc{Visma Solutions}}{}{}{\vismascecontent}
+
+\cventry{02/2024--08/2026}{Principal Architect}{\textsc{Analyse²}}{}{}{\analysepacontent}
 
 \cventry{08/2021--02/2024}{Cloud DevOps Architect}{\textsc{Analyse²}}{}{}{\analysedoacontent}
 
