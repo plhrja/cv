@@ -83,9 +83,10 @@
       {}%
       {%
        \setlength\fboxrule{\@photoframewidth}%
-       \ifdim\@photoframewidth=0pt%
-         \setlength{\fboxsep}{0pt}\fi%
-       {\color{color1}\framebox{\includegraphics[width=\@photowidth]{\@photo}}}}}%
+       \setlength{\fboxsep}{0pt}% Roope-edit: the frame hugs the picture (no white gutter), whatever its width
+       % Roope-edit: frame colour defaults to color1; override with \colorlet{photoframecolor}{...} in the preamble
+       \@ifundefinedcolor{photoframecolor}{\colorlet{photoframecolor}{color1}}{}%
+       {\color{photoframecolor}\framebox{\includegraphics[width=\@photowidth]{\@photo}}}}}%
   \usebox{\makecvtitlepicturebox}%
   % name
   \@initializelength{\makecvtitlepicturewidth}%
