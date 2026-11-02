@@ -28,12 +28,14 @@
 % right-aligned in \hintscolumnwidth, content in \maincolumnwidth) but typesets
 % the content as ordinary paragraphs, so an entry may continue on the next page.
 % Lone first/last lines are still forbidden at page breaks.
+% The content is set ragged right (also inside lists): justified lines shrink the
+% inter-word gaps until PDF text extractors merge words, which hurts CV parsers.
 \renewcommand{\cvitem}[3][.25em]{%
   \par\begingroup
     \setlength{\leftskip}{\hintscolumnwidth+\separatorcolumnwidth}%
     \setlength{\@totalleftmargin}{\leftskip}% lists reset \leftskip but indent by this
     \setlength{\linewidth}{\maincolumnwidth}%
-    \sloppy% the stock tabular cells were set \sloppy too
+    \setlength{\rightskip}{0pt plus 1fil}\setlength{\@rightskip}{0pt plus 1fil}% ragged right, \@rightskip so lists inherit it
     \clubpenalty\@M \@clubpenalty\@M \widowpenalty\@M%
     \noindent\llap{\makebox[\hintscolumnwidth][r]{\hintstyle{#2}}\hspace*{\separatorcolumnwidth}}%
     \strut#3\par
@@ -45,7 +47,7 @@
   \cvitem[#1]{#2}{%
     {\bfseries#3}%
     \if\relax\detokenize{#4}\relax{}\else{, {\slshape#4}}\fi%
-    \if\relax\detokenize{#5}\relax{}\else{ #5}\fi%
+    \if\relax\detokenize{#5}\relax{}\else{, #5}\fi% city, comma-separated as in stock moderncv
     \if\relax\detokenize{#6}\relax{}\else{ #6}\fi%
     \strut%
     \ifx&#7&%
@@ -58,7 +60,7 @@
 \usepackage{fontspec}
 \usepackage{tikz}
 \usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
-\usepackage[hscale=0.75,top=1.2cm,bottom=2.0cm]{geometry} % Side margins as before (12.5% each).
+\usepackage[hscale=0.78,top=1.2cm,bottom=2.0cm]{geometry} % Side margins 11% each (was 12.5%): the extra line length keeps the Cloud DevOps Architect entry on page 1.
 % Vertical margins are explicit: a plain scale=0.75 lets geometry split the free height 2:3,
 % i.e. ~30mm above and ~45mm below the text (the footer only needs ~12mm of the latter).
 \setlength{\hintscolumnwidth}{2.5cm} % Uncomment to change the width of the dates column
@@ -74,12 +76,36 @@
 % All information in this block is optional, comment out any lines you don't need
 \title{Curriculum Vitae}
 \address{\haddress}{\pobox}
-\mobile{+358 503002509}
+\mobile{+358 50 300 2509}
 \email{robert.sirvio@alumni.helsinki.fi}
+\extrainfo{\href{https://www.linkedin.com/in/rsirvio}{linkedin.com/in/rsirvio}}% rendered after the email in the footer
+\renewcommand*{\addressfont}{\small\mdseries\slshape}% footer font (casual style default is \normalsize); one step smaller keeps phone, email and LinkedIn on one footer line
 \photo[80pt][0.4pt]{pictures/rs_visma.jpg} % The first bracket is the picture width, the second the thickness of the hairline frame (0pt for no frame); its colour is photoframecolor, set below \moderncvcolor
-\personalinfo{\href{https://www.credly.com/badges/38327cfe-dd39-4aa2-8758-a85937059066}{
+\personalinfo{\hspace*{-4pt}% the badge PNG has transparent padding on its left; measured so the hexagon's edge lines up with the photo frame
+    \href{https://www.credly.com/badges/38327cfe-dd39-4aa2-8758-a85937059066}{%
         \includegraphics[height=1.75cm]{pictures/aws-solution-architect-badge.png}}}
 \quote{\small \hquote}
+
+%----------------------------------------------------------------------------------------
+
+%----------------------------------------------------------------------------------------
+%	MACHINE READABILITY (ATS / PDF text extraction)
+%----------------------------------------------------------------------------------------
+
+% Document language and real keywords in the PDF metadata. moderncv loads hyperref from
+% \AtEndPreamble, so a plain \hypersetup here would run before hyperref exists.
+\AtEndPreamble{%
+  \ifthenelse{\equal{\langname}{finnish}}{\hypersetup{pdflang=fi-FI}}{%
+    \ifthenelse{\equal{\langname}{swedish}}{\hypersetup{pdflang=sv-FI}}{\hypersetup{pdflang=en-GB}}}%
+  \hypersetup{pdfkeywords={Robert Sirviö, Senior Cloud Engineer, Cloud Architect, Platform Engineering, AWS, Kubernetes, Terraform, DevOps}}}
+
+% The MarVoSym icons moderncv uses have no Unicode mapping: text extractors read the list
+% bullet as "{" and the footer icons as the letters H and B glued to the phone number and
+% the email address. Use a real bullet and no footer icons.
+\renewcommand*{\labelitemi}{\strut\textcolor{color1}{\textbullet}}
+\renewcommand*{\addresssymbol}{}
+\renewcommand*{\mobilesymbol}{}
+\renewcommand*{\emailsymbol}{}
 
 %----------------------------------------------------------------------------------------
 
@@ -101,13 +127,13 @@
 %----------------------------------------------------------------------------------------
 
 %@@@LOCALIZATION@@@
-\section{Employment}
+\section{Work Experience}
 %\section{Työkokemus}
 %\section{Arbetserfarenhet}
 %@@@@@@@@@@@@@@@@@@
 
 
-\cventry{08/2026--}{Senior Cloud Engineer}{\textsc{Visma Solutions}}{}{}{\vismascecontent}
+\cventry{08/2026--\present}{Senior Cloud Engineer}{\textsc{Visma Solutions}}{}{}{\vismascecontent}
 
 \cventry{02/2024--08/2026}{Principal Architect}{\textsc{Analyse²}}{}{}{\analysepacontent}
 
@@ -130,30 +156,44 @@
 %----------------------------------------------------------------------------------------
 
 %@@@LOCALIZATION@@@
-\section{Software Development Skills}
-%\section{Ohelmointitaidot}
-%\section{Programmeringskunskaper}
+\section{Technical Skills}
+%\section{Tekninen osaaminen}
+%\section{Tekniska färdigheter}
 %@@@@@@@@@@@@@@@@@@
 
-\cvitem[.2cm]{\langscript}{C\#, TypeScript/JS, Python, Bash, SQL, \LaTeX}
-\cvitem[.2cm]{\techframe}{Terraform, CDK, CFN, Docker, K8s, Helm, GitHub Actions, GitLab CI, .NET, Angular, Playwright, Robot Framework}
-\cvitem[.2cm]{\aitools}{Agentic AI systems, Claude Code (agents, skills, hooks), MCP}
+\cvitem[.2cm]{\langscript}{C\#, TypeScript, JavaScript, Python, Bash, SQL, LaTeX}
+\cvitem[.2cm]{\techframe}{Terraform, AWS CDK, CloudFormation, Docker, Kubernetes, Helm, GitHub Actions, GitLab CI, .NET, Angular, Playwright, Robot Framework}
+\cvitem[.2cm]{\aitools}{Agentic AI, Claude Code (agents, skills, hooks), Model Context Protocol (MCP)}
 \cvitem[.2cm]{\methods}{\methodscontent}
-\cvitem{\platforms}{AWS, Azure/Entra ID, GitHub, GitLab, Snowflake, Datadog, Linux, Windows}
+\cvitem{\platforms}{AWS, Azure, Entra ID, GitHub, GitLab, Snowflake, Datadog, Linux, Windows}
 \cvitem{\db}{PostgreSQL, SQL Server, Redshift}
 
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATIONS
+%----------------------------------------------------------------------------------------
+
+%@@@LOCALIZATION@@@
+\section{Certifications}
+%\section{Sertifikaatit}
+%\section{Certifieringar}
+%@@@@@@@@@@@@@@@@@@
+% Issue year in the date column; the validity is spelled out so a parser does not read
+% "2025--2028" as a degree that ends in the future. The verification URL is text, because
+% the badge image and its link annotation are invisible to text extraction.
+\cventry{2025}{AWS Certified Solutions Architect -- Associate}{\validuntil{} 2028}{}{}{%
+  \certverify{\href{https://www.credly.com/badges/38327cfe-dd39-4aa2-8758-a85937059066}{credly.com/badges/38327cfe-dd39-4aa2-8758-a85937059066}}}
+\cventry{2020}{Certified ScrumMaster™ (CSM)}{\validuntil{} 2022}{}{}{}
 
 %----------------------------------------------------------------------------------------
 %	EDUCATION
 %----------------------------------------------------------------------------------------
 
 %@@@LOCALIZATION@@@
-\section{Education \& Certifications}
+\section{Education}
 %\section{Koulutus}
 %\section{Utbildning}
 %@@@@@@@@@@@@@@@@@@
-\cventry{2025--2028}{AWS Certified Solutions Architect -- Associate}{}{}{}{}
-\cventry{2020--2022}{Certified ScrumMaster™}{}{}{}{}
 \cventry{2014--2016}{\mdeg}{\uni}{}{}{}
 \cventry{2010--2014}{\bdeg}{\uni}{}{}{}
 % \cventry{2009--2010}{\army}{\armybase}{}{}{}
@@ -168,9 +208,12 @@
 %\section{Språkkunskaper}
 %@@@@@@@@@@@@@@@@@@
 
-\cvitemwithcomment{\bfseries \native}{\mdseries \swedish}{}
-\cvitemwithcomment{\bfseries \excellent}{\mdseries \finnish{} \english}{}
-\cvitemwithcomment{\bfseries \basics}{\mdseries \japanese{} \german}{}
+% Language first, standard level, one per row: parsers pair "Finnish" with "Fluent" reliably.
+\cvitemwithcomment{\bfseries \swedish}{\mdseries \native}{}
+\cvitemwithcomment{\bfseries \finnish}{\mdseries \fluent}{}
+\cvitemwithcomment{\bfseries \english}{\mdseries \fluent}{}
+\cvitemwithcomment{\bfseries \japanese}{\mdseries \basics}{}
+\cvitemwithcomment{\bfseries \german}{\mdseries \basics}{}
 
 %----------------------------------------------------------------------------------------
 %	LINKS

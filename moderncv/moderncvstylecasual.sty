@@ -94,22 +94,22 @@
   \parbox[b]{\textwidth-\makecvtitlepicturewidth}{%
     \raggedleft\namefont{\color{color2!50}\@firstname} {\color{color2}\@familyname}}\\[-.35em]% alternate design: \MakeLowercase and no space
   {\color{color2!50}\rule{\textwidth}{.25ex}}%
-  \\[.75em]%
+  \\[.57em]% Roope-edit: title cap height as far below the rule as the name baseline is above it (was .75em)
   % optional title (kept close to the horizontal rule, independent of personal info height)
   \ifthenelse{\equal{\@title}{}}%
     {}%
     {{\null\hfill\titlestyle{\@title}}%
-     \ifthenelse{\isundefined{\@personalinfo}}{\\}{\\[-1.9em]}}%
+     \ifthenelse{\isundefined{\@personalinfo}}{\\}{\\[-1.22em]}}% Roope-edit: badge top level with the title cap height (was -1.9em)
   % optional personal info (can contain tall graphics without affecting title spacing)
   \ifthenelse{\isundefined{\@personalinfo}}%
     {}%
-    {{\pinfostyle{\@personalinfo}}\\[1.0em]}%
+    {{\pinfostyle{\@personalinfo}}\\[0.6em]}% Roope-edit: same gap below the badge as around the rule (was 1.0em)
   % if neither title nor personal info is present, keep the original vertical gap
   \ifthenelse{\equal{\@title}{}}{\ifthenelse{\isundefined{\@personalinfo}}{\\[1em]}{}}{}%
   % optional quote
   \ifthenelse{\isundefined{\@quote}}%
     {}%
-    {{\null\hfill\begin{minipage}{\quotewidth}\centering{\@quote}\end{minipage}\hfill\null\\[1.5em]}}%
+    {{\null\hfill\begin{minipage}{\quotewidth}\centering{\@quote}\end{minipage}\hfill\null\\[0.5em]}}% Roope-edit: tighter gap before the first section (was 1.5em)
   \par}% to avoid weird spacing bug at the first section if no blank line is left after \maketitle
 
 \renewcommand*{\makecvfooter}{%
