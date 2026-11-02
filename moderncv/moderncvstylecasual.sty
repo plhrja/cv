@@ -87,7 +87,7 @@
        % Roope-edit: frame colour defaults to color1; override with \colorlet{photoframecolor}{...} in the preamble
        \@ifundefinedcolor{photoframecolor}{\colorlet{photoframecolor}{color1}}{}%
        {\color{photoframecolor}\framebox{\includegraphics[width=\@photowidth]{\@photo}}}}}%
-  \usebox{\makecvtitlepicturebox}%
+  \raisebox{-6pt}{\usebox{\makecvtitlepicturebox}}% Roope-edit: drop the photo so it sits ~2pt above the rule while the name baseline keeps its distance
   % name
   \@initializelength{\makecvtitlepicturewidth}%
   \settowidth{\makecvtitlepicturewidth}{\usebox{\makecvtitlepicturebox}}%
@@ -99,7 +99,7 @@
   \ifthenelse{\equal{\@title}{}}%
     {}%
     {{\null\hfill\titlestyle{\@title}}%
-     \ifthenelse{\isundefined{\@personalinfo}}{\\}{\\[-1.22em]}}% Roope-edit: badge top level with the title cap height (was -1.9em)
+     \ifthenelse{\isundefined{\@personalinfo}}{\\}{\\[-1.72em]}}% Roope-edit: badge ~2pt below the rule, hugging it like the photo above (was -1.9em)
   % optional personal info (can contain tall graphics without affecting title spacing)
   \ifthenelse{\isundefined{\@personalinfo}}%
     {}%
